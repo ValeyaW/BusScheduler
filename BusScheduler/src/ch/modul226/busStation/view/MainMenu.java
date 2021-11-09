@@ -82,7 +82,7 @@ public class MainMenu {
                 System.out.println(platform.getSize() == InternationalPlatform.BIG ? "Grosse Platform" : "kleine Platform");
             }
             System.out.println("Fahrtennummer: " + platform.getRide().getNumber());
-            System.out.println("Bustyp" + (platform.getBus().getType() == Bus.JET ? "Jet" : "prop"));
+            System.out.println("Bustyp" + (platform.getBus().getType() == Bus.TWOSTORY ? "Zweistöckig" : "Einstöckig"));
         }
         catch(InvalidPlatformNumberException ex){
             System.out.println(ex.getMessage());
@@ -125,7 +125,7 @@ public class MainMenu {
 
     private Bus procureBusData(){
         Bus bus = new Bus();
-        bus.setType(ConsoleReader.readInteger("Bustyp (0=Prop, 1=Jet)"));
+        bus.setType(ConsoleReader.readInteger("Bustyp (0=Einstöckig, 1=Zweistöckig)"));
         bus.setCapacity(ConsoleReader.readInteger("Passagierzahl"));
         bus.setRefuelingTime(ConsoleReader.readString("Nachtankzeit"));
         return bus;

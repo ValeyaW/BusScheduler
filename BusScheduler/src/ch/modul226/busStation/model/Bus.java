@@ -5,8 +5,8 @@ public class Bus {
     private String refuelingTime;
     private int capacity;
 
-    public static final int PROP = 0;   //was machen damit?
-    public static final int JET = 1;    //was machen damit?
+    public static final int ONESTORY = 0;
+    public static final int TWOSTORY = 1;
 
     public Bus() {
     }
